@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/main_background_activity_main"
+    android:paddingLeft="0dp"
+    android:paddingTop="10dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnUser"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ripple_button"
+        android:contentDescription="User Screen Button"
+        android:elevation="10dp"
+        android:src="@drawable/vec_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnCalendar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ripple_button"
+        android:contentDescription="Calendar Screen Button"
+        android:elevation="10dp"
+        android:src="@drawable/vec_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary_orange_buttons_color"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/main_circle"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:padding="6dp"
+            android:text="14"
+            android:textColor="#C4ECFF"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="September"
+            android:textColor="#A6DFFA"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:text="Friday"
+            android:textColor="#C4ECFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_how_do_you_feel"
+            android:backgroundTint="#DCF4FF"
+            android:letterSpacing="0.1"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:stateListAnimator="@null"
+            android:text="How do you feel?"
+            android:textColor="#4E8098"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbarSize="1dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_scrollbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scrollX="0dp">
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+            <Button
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/secondary_orange_buttons_color"
+                android:textColor="@color/white"
+                android:textSize="8sp"></Button>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
