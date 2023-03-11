@@ -3,6 +3,7 @@ package pl.junkers.moody
 import android.app.ActionBar.LayoutParams
 import android.content.Context
 import android.graphics.Typeface
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
@@ -12,6 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
+import java.util.*
 import kotlin.math.roundToInt
 
 
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         llScrollBar = findViewById(R.id.ll_scrollbar)
         scrollBar!!.doOnLayout()
         {
-            llScrollBar?.addView(createLLForScrollableView())
+            llScrollBar?.addView(createAdditionalViewForScrollableView())
         }
 
         /* ADD CURR DATE AND GENERATE DAYS */
@@ -37,10 +39,12 @@ class MainActivity : AppCompatActivity() {
     private fun createButtonForScrollableView(): LinearLayout {
 
         val newButton = Button(this)
-        newButton.text = "15"
+        newButton.text = TimeSetter.getDayOfMonth()
         newButton.textSize = 12F
         newButton.height = 49
         newButton.width = 49
+        println(TimeSetter.generateIdForButton())
+        newButton.id = TimeSetter.generateIdForButton()
         newButton.setTypeface(newButton.typeface, Typeface.BOLD)
         newButton.setTextColor(ContextCompat.getColor(this, R.color.white))
         newButton.setBackgroundResource(R.drawable.rip_button)
@@ -59,12 +63,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun createTextViewForScrollableView(): TextView{
         val newTextView = TextView(this)
-        newTextView.text = "WED"
+        newTextView.text = TimeSetter.getNameOfTheDayOfTheWeek()
         newTextView.gravity = Gravity.CENTER
         return newTextView
     }
 
-    private fun createLLForScrollableView(): LinearLayout {
+    private fun createAdditionalViewForScrollableView(): LinearLayout {
         val newLL = LinearLayout(this)
         newLL.orientation = LinearLayout.VERTICAL
         val layoutParams = LinearLayout.LayoutParams(
@@ -78,6 +82,9 @@ class MainActivity : AppCompatActivity() {
         newLL.addView(createTextViewForScrollableView())
         println(newLL.width)
         println(newLL.height)
+        println(TimeSetter.getFullDate())
+        println(TimeSetter.getDayOfMonth())
+        println(TimeSetter.getNameOfTheDayOfTheWeek())
         return newLL
     }
 
