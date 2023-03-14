@@ -10,17 +10,18 @@ class TimeSetter {
             return formatter.format(this)
         }
 
-        private fun getCurrDateTime(): Date {
+        fun getCurrDateTime(): Date {
             return Calendar.getInstance().time
         }
 
-        fun generateIdForButton(): Int {
-            val stringToParse: String = getFullDate()
+        fun generateIdForButton(calendar: Calendar): Int {
+            val stringToParse: String = getFullDate(calendar)
             var stringArr = stringToParse.split("/")
             var idInString = ""
             for (part: String in stringArr) {
                 idInString += part
             }
+            println(idInString)
             return idInString.toInt()
         }
 
@@ -28,13 +29,31 @@ class TimeSetter {
             return getCurrDateTime().toString("yyyy/MM/dd")
         }
 
+        fun getFullDate(calendar: Calendar): String {
+            return calendar.time.toString("yyyy/MM/dd")
+        }
+
         fun getDayOfMonth(): String {
             return getCurrDateTime().toString("dd")
         }
 
-        fun getNameOfTheDayOfTheWeek(): String{
+        fun getNameOfTheDayOfTheWeek(): String {
             var dayOfWeek: String = ""
             when (Calendar.getInstance().get(Calendar.DAY_OF_WEEK)) {
+                1 -> dayOfWeek = "SUN"
+                2 -> dayOfWeek = "MON"
+                3 -> dayOfWeek = "TUE"
+                4 -> dayOfWeek = "WED"
+                5 -> dayOfWeek = "THU"
+                6 -> dayOfWeek = "FRI"
+                7 -> dayOfWeek = "SAT"
+            }
+            return dayOfWeek
+        }
+
+        fun getNameOfTheDayOfTheWeek(calendar: Calendar): String {
+            var dayOfWeek: String = ""
+            when (calendar.get(Calendar.DAY_OF_WEEK)) {
                 1 -> dayOfWeek = "SUN"
                 2 -> dayOfWeek = "MON"
                 3 -> dayOfWeek = "TUE"

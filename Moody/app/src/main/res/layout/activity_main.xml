@@ -139,123 +139,123 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:gravity="center"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
 
-                <Button
-                    android:layout_width="49dp"
-                    android:layout_height="49dp"
-                    android:background="@drawable/rip_button"
-                    android:text="14"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"></Button>
+<!--                <Button-->
+<!--                    android:layout_width="49dp"-->
+<!--                    android:layout_height="49dp"-->
+<!--                    android:background="@drawable/rip_button"-->
+<!--                    android:text="14"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"></Button>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="WED"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="WED"></TextView>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:orientation="vertical">-->
 
-                <Button
-                    android:layout_width="49dp"
-                    android:layout_height="49dp"
+<!--                <Button-->
+<!--                    android:layout_width="49dp"-->
+<!--                    android:layout_height="49dp"-->
 
-                    android:background="@drawable/rip_button"
-                    android:text="14"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"></Button>
+<!--                    android:background="@drawable/rip_button"-->
+<!--                    android:text="14"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"></Button>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="FRI"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="FRI"></TextView>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:orientation="vertical">-->
 
-                <Button
-                    android:layout_width="49dp"
-                    android:layout_height="49dp"
+<!--                <Button-->
+<!--                    android:layout_width="49dp"-->
+<!--                    android:layout_height="49dp"-->
 
-                    android:background="@drawable/rip_button"
-                    android:text="14"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"></Button>
+<!--                    android:background="@drawable/rip_button"-->
+<!--                    android:text="14"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"></Button>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="FRI"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="FRI"></TextView>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:orientation="vertical">-->
 
-                <Button
-                    android:layout_width="49dp"
-                    android:layout_height="49dp"
+<!--                <Button-->
+<!--                    android:layout_width="49dp"-->
+<!--                    android:layout_height="49dp"-->
 
-                    android:background="@drawable/rip_button"
-                    android:text="14"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"></Button>
+<!--                    android:background="@drawable/rip_button"-->
+<!--                    android:text="14"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"></Button>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Friday"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="Friday"></TextView>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="15dp"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="15dp"-->
+<!--                android:orientation="vertical">-->
 
-                <Button
-                    android:layout_width="49dp"
-                    android:layout_height="49dp"
+<!--                <Button-->
+<!--                    android:layout_width="49dp"-->
+<!--                    android:layout_height="49dp"-->
 
-                    android:background="@drawable/rip_button"
-                    android:text="14"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"></Button>
+<!--                    android:background="@drawable/rip_button"-->
+<!--                    android:text="14"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"></Button>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="FRI"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="FRI"></TextView>-->
+<!--            </LinearLayout>-->
 
 
         </LinearLayout>
