@@ -1,8 +1,8 @@
 package pl.junkers.moody
+/*import android.view.ViewTreeObserver
 
 import android.graphics.PorterDuff
 import android.view.MotionEvent
-import android.view.ViewTreeObserver
 import android.widget.HorizontalScrollView
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -34,4 +34,4 @@ class View: AppCompatActivity() {
             }
         }
     })
-}
+} */
