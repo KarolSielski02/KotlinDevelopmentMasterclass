@@ -18,7 +18,8 @@ import kotlin.collections.ArrayList
 import kotlin.math.roundToInt
 
 
-class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver.OnScrollChangedListener {
+class MainActivity : AppCompatActivity(), View.OnTouchListener,
+    ViewTreeObserver.OnScrollChangedListener {
 
     private lateinit var hsvScrollBar: HorizontalScrollView
     private var llScrollBar: LinearLayout? = null
@@ -34,12 +35,13 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         hsvScrollBar.viewTreeObserver.addOnScrollChangedListener(this)
 
         llScrollBar = findViewById(R.id.ll_scrollbar)
-        hsvScrollBar.doOnLayout() {
-            initializeItemsInHorizontalScrollView()
+        hsvScrollBar.doOnLayout {
+            initializeObjectsInHorizontalScrollView()
         }
 
         /* ADD CURR DATE AND GENERATE DAYS */
     }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
         return false
@@ -52,9 +54,10 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         if (rightDetector <= 0) {
             val calendar = scrollViewLinkedList.last.calendar
             addOnRight(calendar)
-            if (scrollViewLinkedList.size >= 15){
-                for (i in 1 .. 4)
-                scrollViewLinkedList.removeFirst()
+            if (scrollViewLinkedList.size >= 15) {
+                for (i in 1..4) {
+                    scrollViewLinkedList.removeFirst()
+                }
             }
         }
         if (leftDetector <= 0) {
@@ -62,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         }
     }
 
-    private fun initializeItemsInHorizontalScrollView() {
+    private fun initializeObjectsInHorizontalScrollView() {
         val calendar = Calendar.getInstance()
         calendar.add(Calendar.DAY_OF_MONTH, -2)
 
@@ -73,6 +76,7 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
                 calendar
             )
             scrollViewLinkedList.add(dayObj)
+            println("AAA: $calendar")
             calendar.add(Calendar.DAY_OF_MONTH, 1)
         }
 
@@ -83,7 +87,6 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
                 )
             )
         }
-
 
         /*
 
@@ -125,7 +128,10 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         }
     }
 
-    private fun createAdditionalViewForScrollableView(dayOfMonth: String, calDate: Calendar): LinearLayout {
+    private fun createAdditionalViewForScrollableView(
+        dayOfMonth: String,
+        calendar: Calendar
+    ): LinearLayout {
 
         val newLL = LinearLayout(this)
         newLL.orientation = LinearLayout.VERTICAL
@@ -135,8 +141,9 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         layoutParams.setMargins(dpToPx(15), dpToPx(15), dpToPx(15), dpToPx(15))
         layoutParams.gravity = Gravity.CENTER
         newLL.layoutParams = layoutParams
-        newLL.addView(createButtonForScrollableView(dayOfMonth, calDate))
-        newLL.addView(createTextViewForScrollableView(calDate))
+
+        newLL.addView(createButtonForScrollableView(dayOfMonth, calendar))
+        newLL.addView(createTextViewForScrollableView(calendar))
 
         return newLL
     }
@@ -164,9 +171,10 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener, ViewTreeObserver
         return newLL
     }
 
-    private fun createTextViewForScrollableView(calDate: Calendar): TextView {
+    private fun createTextViewForScrollableView(calendar: Calendar): TextView {
+        println("createTextViewForScrollableView calendar: $calendar")
         val newTextView = TextView(this)
-        newTextView.text = TimeSetter.getNameOfTheDayOfTheWeek(calDate)
+        newTextView.text = TimeSetter.getNameOfTheDayOfTheWeek(calendar)
         newTextView.gravity = Gravity.CENTER
         return newTextView
     }

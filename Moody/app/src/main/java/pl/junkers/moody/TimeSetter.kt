@@ -16,12 +16,12 @@ class TimeSetter {
 
         fun generateIdForButton(calendar: Calendar): Int {
             val stringToParse: String = getFullDate(calendar)
-            var stringArr = stringToParse.split("/")
+            val stringArr = stringToParse.split("/")
             var idInString = ""
             for (part: String in stringArr) {
                 idInString += part
             }
-            println(idInString)
+//          println(idInString)
             return idInString.toInt()
         }
 
@@ -53,6 +53,7 @@ class TimeSetter {
 
         fun getNameOfTheDayOfTheWeek(calendar: Calendar): String {
             var dayOfWeek: String = ""
+            println("Calendar day of week in getNameOfTheDayOfTheWeek: " + calendar.get(Calendar.DAY_OF_WEEK))
             when (calendar.get(Calendar.DAY_OF_WEEK)) {
                 1 -> dayOfWeek = "SUN"
                 2 -> dayOfWeek = "MON"
@@ -62,6 +63,7 @@ class TimeSetter {
                 6 -> dayOfWeek = "FRI"
                 7 -> dayOfWeek = "SAT"
             }
+            println("DayOfWeek: $dayOfWeek")
             return dayOfWeek
         }
     }
